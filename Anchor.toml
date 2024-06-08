@@ -1,0 +1,18 @@
+[toolchain]
+
+[features]
+resolution = false
+skip-lint = false
+
+[programs.devnet]
+hello_clockwork = "7pvGRjoaXdBPfFV3wGBYoHn3KAST8fJvuMePjhrPy5jc"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
